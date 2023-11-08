@@ -82,7 +82,7 @@ char ** ft_split(char const *s, char c)
 }
 
 
-int main(void)
+/*int main(void)
 {
     char **result;
     size_t i;
@@ -109,4 +109,4 @@ int main(void)
 	    free(result[i]);
     free(result);
     return 0;
-}
+}*/

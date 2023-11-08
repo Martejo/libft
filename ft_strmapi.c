@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
     char *ptr;
     size_t i;
@@ -31,7 +31,7 @@ char * ft_strmapi(char const *s, char (*f)(unsigned int, char))
     
 }
 
-int main()
+/*int main()
 {
     const char *str = "Hello, World!";
     char *result = ft_strmapi(str, &ft_toupper);
@@ -47,4 +47,4 @@ int main()
     }
 
     return 0;
-}
+}*/
