@@ -6,7 +6,7 @@
 /*   By: gemartel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:34:41 by gemartel          #+#    #+#             */
-/*   Updated: 2023/11/07 16:34:22 by gemartel         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:53:51 by gemartel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)current);
 		current++;
 	}
-	if (*current == (unsigned char)c) // Pour si c == \0
-			return ((char *)current);
+	if (*current == (unsigned char)c)
+		return ((char *)current);
 	return (NULL);
 }

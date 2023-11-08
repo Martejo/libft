@@ -6,13 +6,13 @@
 /*   By: gemartel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:00:12 by gemartel          #+#    #+#             */
-/*   Updated: 2023/11/07 12:21:47 by gemartel         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:33:17 by gemartel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	is_set(char const *set, char c)
+static int	is_set(char const *set, char c)
 {
 	int	i;
 
@@ -40,8 +40,7 @@ static int	len_dest(char const *set, char const *s1)
 	return (end - start);
 }
 
-
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*dest;
 	size_t	i;
@@ -51,14 +50,13 @@ char *ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	len = len_dest(set, s1);
 	if (len <= 0)
-		return (ft_strdup("")); // ft_strdup pour créer une chaîne vide
-	dest = (char *)malloc((len + 1) * sizeof(char)); // +1 pour le caractère nul
+		return (ft_strdup(""));
+	dest = (char *)malloc((len + 1) * sizeof(char));
 	if (!dest)
 		return (NULL);
 	i = 0;
 	while (is_set(set, s1[i]))
 		i++;
-	ft_strlcpy(dest, &s1[i], len + 1); // +1 pour copier le caractère nul
+	ft_strlcpy(dest, &s1[i], len + 1);
 	return (dest);
 }
-

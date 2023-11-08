@@ -6,13 +6,13 @@
 /*   By: gemartel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:52:35 by gemartel          #+#    #+#             */
-/*   Updated: 2023/11/07 10:59:29 by gemartel         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:54:24 by gemartel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char *ft_strcat(char *dest, const char *src)
+static char	*ft_strcat(char *dest, const char *src)
 {
 	int	i;
 	int	len;

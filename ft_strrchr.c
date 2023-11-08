@@ -6,7 +6,7 @@
 /*   By: gemartel <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:39:24 by gemartel          #+#    #+#             */
-/*   Updated: 2023/11/07 16:37:36 by gemartel         ###   ########.fr       */
+/*   Updated: 2023/11/08 11:32:07 by gemartel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 			last_occurrence = (char *) &s[i];
 		i++;
 	}
-	if (s[i] == (unsigned char)c)  // Vérifie si c est '\0'
+	if (s[i] == (unsigned char)c)
 		last_occurrence = (char *) &s[i];
-	
 	return (last_occurrence);
 }
