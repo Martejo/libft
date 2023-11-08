@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int len_itoa(int n)
+static int len_itoa(int n)
 {
     int    len;
     
@@ -24,7 +24,7 @@ int len_itoa(int n)
     return(len);
 }
 
-void is_negative(int *sign, int *n)
+static void is_negative(int *sign, int *n)
 {
     if (*n < 0)
     {
@@ -33,7 +33,7 @@ void is_negative(int *sign, int *n)
     }
 }
 
-char * ft_itoa(int n)
+char *ft_itoa(int n)
 {
     char *strNum;
     int sign;
@@ -61,7 +61,7 @@ char * ft_itoa(int n)
     return (strNum);
 }
 
-int main()
+/*int main()
 {
     int n = 0;
     char *s;
@@ -70,4 +70,4 @@ int main()
     printf("s = %s\n", s);
     free(s);
     return (0);
-}
+}*/

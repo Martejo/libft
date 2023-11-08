@@ -21,9 +21,12 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 			last_occurrence = (char *) &s[i];
 		i++;
 	}
+	if (s[i] == (unsigned char)c)  // Vérifie si c est '\0'
+		last_occurrence = (char *) &s[i];
+	
 	return (last_occurrence);
 }

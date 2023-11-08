@@ -32,39 +32,33 @@ static int	len_dest(char const *set, char const *s1)
 	int	end;
 
 	start = 0;
-	end = ft_strlen(s1) - 1;
-	while (is_set(set, s1[start]) == 1)
+	end = ft_strlen(s1);
+	while (s1[start] && is_set(set, s1[start]))
 		start++;
-	while (is_set(set, s1[end]) == 1)
+	while (end > start && is_set(set, s1[end - 1]))
 		end--;
 	return (end - start);
 }
+
 
 char *ft_strtrim(char const *s1, char const *set)
 {
 	char	*dest;
 	size_t	i;
-	int	len;
+	int		len;
 
 	if (!s1 || !set)
 		return (NULL);
 	len = len_dest(set, s1);
+	if (len <= 0)
+		return (ft_strdup("")); // ft_strdup pour créer une chaîne vide
+	dest = (char *)malloc((len + 1) * sizeof(char)); // +1 pour le caractère nul
+	if (!dest)
+		return (NULL);
 	i = 0;
-	if ((!s1[0] && !set[0]) || len < 1)
-	{
-		dest = (char *)malloc(1 * sizeof(char));
-		if (!dest)
-			return (NULL);
-		dest[0] = '\0';
-	}
-	else
-	{
-		dest = (char *)malloc((len + 1) * sizeof(char));
-		if (!dest)
-			return (NULL);
-		while (is_set(set, s1[i]))
-			i++;
-		ft_strlcpy(dest, &s1[i], len);
-	}
+	while (is_set(set, s1[i]))
+		i++;
+	ft_strlcpy(dest, &s1[i], len + 1); // +1 pour copier le caractère nul
 	return (dest);
 }
+

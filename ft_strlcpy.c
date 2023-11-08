@@ -12,22 +12,23 @@
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	len;
+    size_t  i;
+    size_t  len;
 
-	i = 0;
-	len = 0;
-	while (src[len])
-		len++;
-	while (i < size && src[i] != '\0')
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	while (src[i] != '\0')
-		i++;
-	return (len);
+    len = 0;
+    while (src[len])
+        len++;
+    if (size == 0) // Si size est 0, rien ne doit être copié
+        return (len);
+    i = 0;
+    while (src[i] != '\0' && i < size - 1) // Copie un caractère de moins que la taille pour laisser de la place au '\0'
+    {
+        dst[i] = src[i];
+        i++;
+    }
+    dst[i] = '\0'; // Assure que la chaîne est toujours terminée par '\0'
+    return (len);
 }
+
