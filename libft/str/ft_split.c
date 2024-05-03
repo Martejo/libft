@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hanglade <hanglade@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: gemartel <gemartel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 14:33:01 by hanglade          #+#    #+#             */
-/*   Updated: 2023/11/09 14:33:01 by hanglade         ###   ########.fr       */
+/*   Created: 2023/11/09 14:33:01 by gemartel          #+#    #+#             */
+/*   Updated: 2024/05/03 05:27:07 by gemartel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,22 +113,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strs);
 }
-
-// int main ()
-// {
-// 	#include <stdio.h>
-// 	char **strs=ft_split("hello", ' ');
-// 	int i = 0;
-// 	if (!strs)
-// 	{
-// 		return (0);
-// 	}
-// 	while (strs[i])
-// 	{
-// 		printf("%s\n", strs[i]);
-// 		free(strs[i]);
-// 		i++;
-// 	}
-// 	free(strs);
-// 	return (0);
-// }
